@@ -1,0 +1,120 @@
+/* 🌸 PetalPredict Stylesheet */
+
+/* Animated gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #F3E2D4, #C5B0CD, #415E72, #17313E);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: #17313E;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(243, 226, 212, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(23, 49, 62, 0.4);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #17313E;
+}
+header .tagline {
+  font-size: 1em;
+  color: #415E72;
+  margin-top: 5px;
+}
+
+/* Form card */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-card h2 {
+  text-align: center;
+  color: #415E72;
+}
+label {
+  font-weight: bold;
+  color: #17313E;
+}
+input {
+  padding: 10px;
+  border: 1px solid #C5B0CD;
+  border-radius: 8px;
+  font-size: 1em;
+}
+button {
+  background-color: #415E72;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #17313E;
+}
+
+/* Result card */
+.result-card {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #C5B0CD;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+  box-shadow: 0 4px 10px rgba(23, 49, 62, 0.4);
+}
+.result-card h2 {
+  margin: 0 0 10px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85em;
+  color: #415E72;
+}
+footer a {
+  color: #17313E;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .heart {
+  color: #E94B3C;
+}
+/* Result fade-in animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

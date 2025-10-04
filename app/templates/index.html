@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🌸 PetalPredict - Iris Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌸 PetalPredict</h1>
+            <p class="tagline">Predict Iris Flower Species with Machine Learning</p>
+        </header>
+
+        <form action="{{ url_for('index') }}" method="post" class="form-card">
+            <h2>Enter Flower Measurements</h2>
+            
+            <label for="Sepal_Length">Sepal Length (cm)</label>
+            <input type="number" step="0.1" name="Sepal_Length" required>
+
+            <label for="Sepal_Width">Sepal Width (cm)</label>
+            <input type="number" step="0.1" name="Sepal_Width" required>
+
+            <label for="Petal_Length">Petal Length (cm)</label>
+            <input type="number" step="0.1" name="Petal_Length" required>
+
+            <label for="Petal_Width">Petal Width (cm)</label>
+            <input type="number" step="0.1" name="Petal_Width" required>
+
+            <button type="submit">🌼 Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result-card fade-in">
+            <h2>Result</h2>
+            <p>{{ prediction_text|safe }}</p>
+        </div>
+        {% endif %}
+
+        <footer>
+            <p>Built with ❤️ by Mubasshir Ahmed</p>
+        </footer>
+    </div>
+</body>
+</html>
